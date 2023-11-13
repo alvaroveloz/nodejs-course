@@ -4,7 +4,7 @@ export const createFile = (base: number = 5): Promise<string> => {
   let output = '';
 
   for (let i = 0; i <= 10; i++) {
-    let resultado = 5 * i;
+    let resultado = base * i;
     output += `${base} x ${i} = ${resultado}\n`;
   }
 
