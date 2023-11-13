@@ -7,9 +7,8 @@ import colors from 'colors/safe';
 console.clear();
 
 
-const base = argv.b;
-const list = argv.l;
+const { b: base, t: to, l: list }= argv
 
-createFile({ base, list }).then((message: string): void => {
+createFile({ base, to,  list }).then((message: string): void => {
   console.log(colors.bgGreen(message));
 })

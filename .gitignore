@@ -23,3 +23,7 @@ tsconfig.tsbuildinfo
 # Archivos generados por sistemas de construcción
 build/
 out/
+
+
+# Salida de tablas de multiplicar
+outputs/*.txt

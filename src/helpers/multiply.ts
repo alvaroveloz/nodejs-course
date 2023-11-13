@@ -3,19 +3,26 @@ import fs from 'fs';
 
 interface fileArgs {
   base: number;
+  to?: number;
   list?: boolean;
 }
 
-export const createFile = ( { base = 5, list = false }: fileArgs  ): Promise<string> => {
+export const createFile = ( { base = 5, list = false, to = 12 }: fileArgs  ): Promise<string> => {
   let output = `==================\nTable base: ${base} \n==================\n\n`;
+  let showInConsole = `==================\nTable base: ${base} \n==================\n\n`;
 
-  for (let i = 0; i <= 10; i++) {
+  if (to > 20) {
+    to = 12;
+  }
+
+  for (let i = 0; i <= to; i++) {
     let resultado = base * i;
-    output += colors.bgCyan(colors.black(`${base} ${colors.blue('x')} ${i} ${colors.red('=')} ${resultado}\n`));
+    output += `${base} x ${i} = ${resultado}\n`;
+    showInConsole += colors.bgCyan(colors.black(`${base} ${colors.blue('x')} ${i} ${colors.red('=')} ${resultado}\n`));
   }
 
   if (list) {
-    console.log(output);
+    console.log(showInConsole);
   }
 
   try {
