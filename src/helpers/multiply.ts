@@ -1,3 +1,4 @@
+import colors  from 'colors/safe';
 import fs from 'fs';
 
 interface fileArgs {
@@ -6,11 +7,11 @@ interface fileArgs {
 }
 
 export const createFile = ( { base = 5, list = false }: fileArgs  ): Promise<string> => {
-  let output = `Table base: ${base} \n`;
+  let output = `==================\nTable base: ${base} \n==================\n\n`;
 
   for (let i = 0; i <= 10; i++) {
     let resultado = base * i;
-    output += `${base} x ${i} = ${resultado}\n`;
+    output += colors.bgCyan(colors.black(`${base} ${colors.blue('x')} ${i} ${colors.red('=')} ${resultado}\n`));
   }
 
   if (list) {
