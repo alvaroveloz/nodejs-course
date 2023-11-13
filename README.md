@@ -1,6 +1,6 @@
 # Notes
 
-NodeJS Course, using yargs and colors
+NodeJS Course with Typescript using yargs and colors
 
 ```
 Options:
@@ -14,3 +14,16 @@ Options:
                                                [number] [required] [default: 12]
 
 ```
+
+
+#### npm start
+##### Default arguments configuration
+
+
+base=5
+list=true
+to=19
+
+````
+tsc && node build/index -b=5 -l=true -t=19
+``````
