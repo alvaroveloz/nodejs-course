@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "tsc": "tsc",
+    "start": "tsc &&node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
